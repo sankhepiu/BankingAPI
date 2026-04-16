@@ -4,7 +4,11 @@ from pydantic import BaseModel, validator
 from datetime import datetime, timedelta
 import uuid
 
-app = FastAPI(title="CloudBank API", version="2.0")
+app = FastAPI(
+    title="CloudBank API",
+    version="2.0",
+    root_path="/default"
+)
 
 # ---------------------------
 # CORS — required for GitHub Pages / browser access
